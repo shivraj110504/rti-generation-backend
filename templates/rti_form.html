@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+        body {
+            font-family: "Times New Roman", serif;
+            padding: 30px;
+        }
+        label {
+            display: block;
+            margin-top: 12px;
+            font-weight: bold;
+        }
+        input, select {
+            width: 420px;
+            padding: 6px;
+            margin-top: 4px;
+        }
+        button {
+            margin-top: 25px;
+            padding: 10px 22px;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h2>RTI Application Form</h2>
+
+<form method="POST" action="/generate">
+
+    <label for="applicant_name">Applicant Name</label>
+    <input id="applicant_name" name="applicant_name" placeholder="Full Name" required>
+
+    <label for="guardian_name">Father / Husband Name</label>
+    <input id="guardian_name" name="guardian_name" placeholder="Guardian Name" required>
+
+    <label for="address">Address</label>
+    <input id="address" name="address" placeholder="Complete Address" required>
+
+    <label for="phone">Phone (STD Code)</label>
+    <input id="phone" name="phone" placeholder="020-XXXXXXX">
+
+    <label for="mobile">Mobile Number</label>
+    <input id="mobile" name="mobile" placeholder="10-digit mobile number">
+
+    <label for="fee_amount">Fee Amount (Rs.)</label>
+    <input id="fee_amount" name="fee_amount" value="10" title="RTI Application Fee">
+
+    <label for="payment_mode">Payment Mode</label>
+    <select id="payment_mode" name="payment_mode">
+        <option value="Cash">Cash</option>
+        <option value="Draft">Draft</option>
+        <option value="Postal Order">Postal Order</option>
+    </select>
+
+    <label for="payment_date">Payment Date</label>
+    <input id="payment_date" name="payment_date" placeholder="DD/MM/YYYY">
+
+    <label for="favoring">Favoring (Authority / Municipal Corporation)</label>
+    <select id="favoring" name="favoring" required>
+        <option value="Municipal Corporation">Municipal Corporation</option>
+        <option value="Municipal Council">Municipal Council</option>
+        <option value="Zilla Parishad">Zilla Parishad</option>
+        <option value="State Government">State Government</option>
+        <option value="Central Government">Central Government</option>
+    </select>
+
+    <label for="photocopy_amount">Photocopy Amount (Rs.)</label>
+    <input id="photocopy_amount" name="photocopy_amount">
+
+    <label for="num_pages">Number of Pages</label>
+    <input id="num_pages" name="num_pages">
+
+    <label for="cd_amount">CD Charges (if any)</label>
+    <input id="cd_amount" name="cd_amount">
+
+    <label for="bpl_status">BPL Status</label>
+    <select id="bpl_status" name="bpl_status">
+        <option value="No">No</option>
+        <option value="Yes">Yes</option>
+    </select>
+
+    <label for="bpl_certificate">BPL Certificate Attached</label>
+    <select id="bpl_certificate" name="bpl_certificate">
+        <option value="No">No</option>
+        <option value="Yes">Yes</option>
+    </select>
+
+    <label for="date">Date</label>
+    <input id="date" name="date" placeholder="DD/MM/YYYY">
+
+    <button type="submit">Generate RTI PDF</button>
+
+</form>
+
+</body>
+</html>
